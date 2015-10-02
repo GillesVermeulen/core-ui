@@ -1,7 +1,7 @@
 {
-  "name": "static_gulp",
+  "name": "moovly-ui",
   "version": "1.0.0",
-  "description": "Base for static front-end development using gulp and sass",
+  "description": "Base style package for Moovly",
   "homepage": "www.cloudoki.com",
   "author": "Rui Molefas",
   "email": "rui@cloudoki.com",
