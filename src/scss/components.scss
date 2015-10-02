@@ -1,0 +1,104 @@
+// Big input
+.big-input {
+	max-width: 550px;
+	border-radius: 4px;
+	background-color: $white;
+	padding: 11px 50px 11px 15px;
+	position: relative;
+	box-shadow: 0 3px 0px 0px rgba(0, 0, 0, 0.1);
+
+	.input-icon {
+		position: absolute;
+	    right: 10px;
+	    top: 9px;
+	    font-size: 2em;
+	    color: $grey;
+	}
+
+	input {
+		border: none;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		font-size: 1.2em;
+		color: $grey;
+
+		&:focus {
+			outline: 0;
+		}
+	}
+}
+
+// Content areas
+.content-area {
+	padding: 50px 0;
+
+	> h1, > h2, > h3 {
+		margin-top: 0;
+	}
+
+	&.greyed {
+		background-color: $light-grey;
+
+		.badge-icon {
+			background-color: $white;
+		}
+	}
+
+	&.blued {
+		background-color: $blue;
+		color: $white;
+	}
+}
+
+// Badges
+.badge-group {
+	margin-bottom: 35px;
+	position: relative;
+
+	.badge-icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.badge-text {
+		padding-left: 50px;
+		padding-top: 5px;
+	}
+}
+
+.badge-icon {
+	background-color: $light-grey;
+	margin-right: 7px;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    color: $grey;
+    font-size: 1.1em;
+    line-height: 35px;
+    display: inline-block;
+    text-align: center;
+}
+
+// Buttons
+.mv-button {
+	border-radius: 4px;
+	background-color: $green;
+	padding: 8px 35px;
+	display: inline-block;
+	color: $white;
+	box-shadow: 0 2px 0px 0px rgba(0, 0, 0, 0.1);
+
+	&.iconed {
+		padding-left: 25px;
+
+		i {
+			margin-right: 5px;
+		}
+	}
+
+	&.blued {
+		background-color: $blue;
+	}
+}

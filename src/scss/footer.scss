@@ -1,0 +1,24 @@
+footer {
+	background-color: #363f48;
+	padding: 50px 0 20px;
+	color: #bdbdbd;
+	font-weight: 100;
+
+	ul {
+		
+		li {
+			font-weight: 400;
+			color: $white;
+
+			> a {
+				color: #bdbdbd;
+				font-weight: 100;
+			}
+		}
+	}
+
+	.under-footer {
+		font-size: .8em;
+		margin-top: 20px;
+	}
+}

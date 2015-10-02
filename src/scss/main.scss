@@ -1,0 +1,44 @@
+/* main scss file */
+@import 'variables';
+@import 'header';
+@import 'components';
+@import 'footer';
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 1.8em;
+	color: $grey;
+}
+
+// fonts
+h1, h2, h3 {
+	font-weight: 300;
+}
+
+a {
+	color: $blue;
+
+	&:hover {
+		color: $blue;
+	}
+}
+
+ul {
+	padding-left: 0;
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+.content-container {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.center {
+	text-align: center;
+}
