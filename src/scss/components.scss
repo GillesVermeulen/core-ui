@@ -27,6 +27,10 @@
 			outline: 0;
 		}
 	}
+
+	&.focuson {
+		box-shadow: 0 0 3px 4px rgba(0, 0, 0, 0.2);
+	}
 }
 
 // Content areas
@@ -48,6 +52,17 @@
 	&.blued {
 		background-color: $blue;
 		color: $white;
+
+		&.with-icons {
+			background-image: url('../images/bg_icons.png');
+			background-position: 0 0;
+		}
+	}
+
+	&.strip {
+		h2 {
+			margin-bottom: 40px;
+		}
 	}
 }
 
@@ -64,7 +79,6 @@
 
 	.badge-text {
 		padding-left: 50px;
-		padding-top: 5px;
 	}
 }
 
@@ -81,6 +95,28 @@
     text-align: center;
 }
 
+.social-badge {
+	background-color: $light-grey;
+	margin-right: 3px;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    color: $white;
+    font-size: .9em;
+    line-height: 25px;
+    display: inline-block;
+    text-align: center;
+
+    &.fb { background-color: #365b98; }
+    &.twt { background-color: #36c9f3; }
+    &.gp { background-color: #d64161; }
+    &.li { background-color: #3678b8; }
+    &.yt { background-color: #d53f48; }
+    &.vi { background-color: #7fcbf0; }
+    &.pi { background-color: #d13f48; }
+    &.inst { background-color: #36769f; }
+}
+
 // Buttons
 .mv-button {
 	border-radius: 4px;
@@ -90,8 +126,16 @@
 	color: $white;
 	box-shadow: 0 2px 0px 0px rgba(0, 0, 0, 0.1);
 
+	&:hover {
+		box-shadow: 0 4px 0px 0px rgba(0, 0, 0, 0.1);
+		background-color: #46cb29;
+		position: relative;
+		bottom: 1px;
+		cursor: pointer;
+	}
+
 	&.iconed {
-		padding-left: 25px;
+		padding-left: 35px;
 
 		i {
 			margin-right: 5px;
@@ -100,5 +144,9 @@
 
 	&.blued {
 		background-color: $blue;
+
+		&:hover {
+			background-color: #1692e5;
+		}
 	}
 }

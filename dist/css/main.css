@@ -1,10 +1,11 @@
 /* main scss file */
 header nav {
-  max-height: 60px;
+  max-height: 80px;
   background-color: #fff !important; }
   header nav .main-menu {
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
+    padding-top: 20px;
     text-align: justify;
     -ms-text-justify: distribute-all-lines;
     text-justify: distribute-all-lines; }
@@ -22,21 +23,32 @@ header nav {
         font-size: 0;
         line-height: 0; }
   header nav li > a {
-    padding-top: 20px !important;
-    padding-bottom: 20px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
     text-transform: uppercase;
-    font-size: .9em;
-    font-weight: 400; }
+    font-size: .7em;
+    font-weight: 400;
+    border-bottom: 2px solid #fff; }
+    header nav li > a#login {
+      border: thin solid #bbb;
+      border-radius: 4px; }
+      header nav li > a#login:hover {
+        background-color: #189df7;
+        color: #fff;
+        border-color: #189df7; }
     header nav li > a:hover {
       border-bottom: 2px solid #189df7; }
   header nav .navbar-brand {
     max-width: 150px;
-    padding-top: 10px !important; }
+    padding-top: 20px !important; }
 
 header .header {
   padding: 65px 0;
   margin-top: 55px;
   background-color: #189df7;
+  background-image: url("../images/bg_icons.png");
+  background-position: 0 30px;
+  background-repeat: repeat;
   color: #fff; }
 
 .big-input {
@@ -61,6 +73,8 @@ header .header {
     color: #666; }
     .big-input input:focus {
       outline: 0; }
+  .big-input.focuson {
+    box-shadow: 0 0 3px 4px rgba(0, 0, 0, 0.2); }
 
 .content-area {
   padding: 50px 0; }
@@ -73,6 +87,11 @@ header .header {
   .content-area.blued {
     background-color: #189df7;
     color: #fff; }
+    .content-area.blued.with-icons {
+      background-image: url("../images/bg_icons.png");
+      background-position: 0 0; }
+  .content-area.strip h2 {
+    margin-bottom: 40px; }
 
 .badge-group {
   margin-bottom: 35px;
@@ -82,8 +101,7 @@ header .header {
     top: 0;
     left: 0; }
   .badge-group .badge-text {
-    padding-left: 50px;
-    padding-top: 5px; }
+    padding-left: 50px; }
 
 .badge-icon {
   background-color: #f5f6fa;
@@ -97,6 +115,34 @@ header .header {
   display: inline-block;
   text-align: center; }
 
+.social-badge {
+  background-color: #f5f6fa;
+  margin-right: 3px;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  color: #fff;
+  font-size: .9em;
+  line-height: 25px;
+  display: inline-block;
+  text-align: center; }
+  .social-badge.fb {
+    background-color: #365b98; }
+  .social-badge.twt {
+    background-color: #36c9f3; }
+  .social-badge.gp {
+    background-color: #d64161; }
+  .social-badge.li {
+    background-color: #3678b8; }
+  .social-badge.yt {
+    background-color: #d53f48; }
+  .social-badge.vi {
+    background-color: #7fcbf0; }
+  .social-badge.pi {
+    background-color: #d13f48; }
+  .social-badge.inst {
+    background-color: #36769f; }
+
 .mv-button {
   border-radius: 4px;
   background-color: #50db32;
@@ -104,12 +150,20 @@ header .header {
   display: inline-block;
   color: #fff;
   box-shadow: 0 2px 0px 0px rgba(0, 0, 0, 0.1); }
+  .mv-button:hover {
+    box-shadow: 0 4px 0px 0px rgba(0, 0, 0, 0.1);
+    background-color: #46cb29;
+    position: relative;
+    bottom: 1px;
+    cursor: pointer; }
   .mv-button.iconed {
-    padding-left: 25px; }
+    padding-left: 35px; }
     .mv-button.iconed i {
       margin-right: 5px; }
   .mv-button.blued {
     background-color: #189df7; }
+    .mv-button.blued:hover {
+      background-color: #1692e5; }
 
 footer {
   background-color: #363f48;
@@ -122,13 +176,18 @@ footer {
     footer ul li > a {
       color: #bdbdbd;
       font-weight: 100; }
+      footer ul li > a:hover {
+        color: #fff; }
   footer .under-footer {
     font-size: .8em;
     margin-top: 20px; }
+  footer .social-icons {
+    position: relative;
+    top: 20px; }
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.8em;
   color: #666; }
@@ -148,9 +207,15 @@ ul {
 img {
   max-width: 100%; }
 
+p {
+  margin-bottom: 20px; }
+
 .content-container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto; }
 
 .center {
   text-align: center; }
+
+.clearfix {
+  clear: both; }

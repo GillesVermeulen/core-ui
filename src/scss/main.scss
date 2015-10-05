@@ -6,7 +6,7 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: 300;
 	line-height: 1.8em;
 	color: $grey;
@@ -34,11 +34,19 @@ img {
 	max-width: 100%;
 }
 
+p {
+	margin-bottom: 20px;
+}
+
 .content-container {
-	max-width: 900px;
+	max-width: 1000px;
 	margin: 0 auto;
 }
 
 .center {
 	text-align: center;
+}
+
+.clearfix {
+	clear: both;
 }
