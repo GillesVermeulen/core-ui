@@ -23,11 +23,11 @@
 
 #Build Notes
 
-## Build Requirements
+## Requirements
 - [nodejs](https://nodejs.org/)
 - [npm](https://www.npmjs.com/)
 
-## Build Install
+## Install
 Install the dependencies with `npm install` or `sudo npm install`. Then just run `gulp`.
 
 ## Adding packages to the build
