@@ -1,68 +1,78 @@
 header {
 	nav {
-		max-height: 80px;
+		min-height: 60px !important;
 		background-color: $white !important;
+		
+		ul {
+			&.navbar-right {
+				padding: 20px 0;
 
-		.main-menu {
-			max-width: 600px;
-			margin: 0 auto;
-			padding-top: 20px;
-			text-align: justify;
-		    -ms-text-justify: distribute-all-lines;
-		    text-justify: distribute-all-lines;
+				li {
+					> a {
+				    	padding-top: 10px !important;
+				    	padding-bottom: 10px !important;
+				    	text-transform: uppercase;
+				    	font-size: .7em;
+				    	font-weight: 400;
+				    	border-bottom: 2px solid $white;
 
-		    > ul {
-		    	width: 100%;
+				    	@media (max-width: 900px) {
+			    			padding-right: 10px;
+			    			padding-left: 10px;
+			    			font-size: .6em;
+						}
 
-		    	> li {
-		    		float: none;
-		    		vertical-align: top;
-				    display: inline-block;
-				    *display: inline;
-				    zoom: 1;
-		    	}
+						@media (min-width: 768px) {
+					    	&#login {
+					    		border: thin solid #bbb;
+					    		border-radius: 4px;
 
-		    	&:after {
-		    		width: 100%;
-				    display: inline-block;
-				    font-size: 0;
-				    line-height: 0
-		    	}
-		    }
+					    		&:hover {
+					    			background-color: $blue;
+					    			color: $white;
+					    			border-color: $blue;
+					    		}
+					    	}
+
+					    	&:hover {
+					    		border-bottom: 2px solid $blue;
+					    	}
+				    	}
+				    }
+
+				    &:last-child {
+			    		margin-left: 40px;
+
+			    		@media (max-width: 900px) {
+			    			margin-left: 10px;
+						}
+
+						@media (max-width: 768px) {
+			    			margin-left: 0;
+						}
+			    	}
+			    }
+
+			    @media (max-width: 768px) {
+			    	padding: 0;
+			    }
+			}
 		}
-
-		li > a {
-	    	padding-top: 10px !important;
-	    	padding-bottom: 10px !important;
-	    	text-transform: uppercase;
-	    	font-size: .7em;
-	    	font-weight: 400;
-	    	border-bottom: 2px solid $white;
-
-	    	&#login {
-	    		border: thin solid #bbb;
-	    		border-radius: 4px;
-
-	    		&:hover {
-	    			background-color: $blue;
-	    			color: $white;
-	    			border-color: $blue;
-	    		}
-	    	}
-
-	    	&:hover {
-	    		border-bottom: 2px solid $blue;
-	    	}
-	    }
 
 	    .navbar-brand {
 	    	max-width: 150px;
 	    	padding-top: 20px !important;
+	    	padding-left: 0;
+
+	    	@media (max-width: 768px) {
+    			max-width: 110px;
+    			padding-top: 15px !important;
+			}
 	    }
 	}
 
 	.header {
-		padding: 65px 0;
+		padding: 65px 0 50px;
 		margin-top: 55px;
 		background-color: $blue;
 		background-image: url('../images/bg_icons.png');

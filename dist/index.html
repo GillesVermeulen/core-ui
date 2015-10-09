@@ -8,15 +8,595 @@
 		<meta charset="utf-8">
 		<title>Cloudoki - static</title>
 		
+		<link href='vendor/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+		<link href='vendor/font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/main.css">
-		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="vendor/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
 
 	</head>
 	<body>
 
+		<!-- Header -->
+		<header>
+			<nav class="navbar navbar-default navbar-fixed-top">
+			  	<div class="content-container">
+			    	<div class="navbar-header">
+				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+				      <a class="navbar-brand" href="#"><img src="images/moovly-logo.png"></a>
+				    </div>
+		
+				    <!-- Collect the nav links, forms, and other content for toggling -->
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				      
+				      <ul class="nav navbar-nav navbar-right">
+				      	<li><a href="#">Gallery</a></li>
+				      		<li><a href="#">Pricing</a></li>
+				      		<li><a href="#">Solutions</a></li>
+				      		<li><a href="#">Marketplace</a></li>
+				      		<li><a href="#">Blog</a></li>
+				      		<li><a href="#">Company</a></li>
+				        <li><a id="login" href="#">Sign up / Login</a></li>
+				      </ul>
+				    </div>
+			  	</div>
+			</nav>
+			<div class="header">
+				<div class="content-container center">
+					<h1>Header Title</h1>
+					<p>Header description text</p>
+				</div>
+			</div>
+		</header>
+		<!-- Content Areas -->
+		<div class="content-area">
+			<div class="content-container">
+				<h2>Content Areas</h2>
+				This is a default content area. Using the <strong>".center"</strong> class will center it's content.
+			</div>
+		</div>
+		<div class="content-area greyed">
+			<div class="content-container">
+				This is a grey content area.
+			</div>
+		</div>
+		<div class="content-area blued">
+			<div class="content-container">
+				This is a blue content area..
+				<br>
+				<small>Adding the <strong>".with-icons"</strong> class will render it with an iconed background, like the header.</small>
+			</div>
+		</div>
+		<div class="content-area paralax-bg" style="background-image: url('images/sketch.jpeg'); color: #fff;">
+			<div class="content-container">
+				This is an image backgrounded content area.
+			</div>
+		</div>
+		<!-- Fonts & Buttons -->
+		<div class="content-area greyed">
+			<div class="content-container">
+				<div class="row">
+					<div class="col-sm-8">
+						<h2>Fonts</h2>
+						<h1>h1: Dragons make amazing pets</h1>
+						<h2>h2: Dragons make amazing pets</h2>
+						<h3>h3: Dragons make amazing pets</h3>
+						<h4>h4: Dragons make amazing pets</h4>
+						<p>Paragraph: Dragons make amazing pets</p>
+						<p class="muted">Muted text: Dragons make amazing pets</p>					</div>
+					<div class="col-sm-4">
+						<h2>Buttons</h2>
+						
+						<br>
+						<span class="mv-button">
+							Default
+						</span>
+						<span class="mv-button iconed">
+							<i class="fa fa-play"></i>
+							Icon
+						</span>
+						<span class="mv-button blued">
+							Blue
+						</span>
+						<span class="mv-button blued iconed">
+							<i class="fa fa-play"></i>
+							Icon
+						</span>
+						<span class="mv-button whited">
+							White
+						</span>
+						<span class="mv-button whited iconed">
+							<i class="fa fa-play"></i>
+							Icon
+						</span>
+						<span class="mv-button blued xl">
+							XL button
+						</span>
+						<span class="mv-button blued full">
+							Full width button
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Badges -->
+		<div class="content-area">
+			<div class="content-container">
+				<div class="row">
+					<div class="col-sm-8">
+						<h2>Badges</h2>
+						<span class="badge-icon"><i class="fa fa-envelope"></i></span> Without text block
+						<div class="badge-group">
+							<span class="badge-icon">
+								<i class="fa fa-envelope" style="position: relative; left: 1px;"></i>
+							</span>
+							<div class="badge-text">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas neque ipsum, consectetur at pulvinar non, cursus non nisl.
+							</div>
+						</div>
+					</div>
+				
+					<div class="col-sm-4">
+						<h2>Social Badges</h2>
+						<div class="social-icons">
+							<a href="#"><div class="social-badge fb"><i class="fa fa-facebook"></i></div></a>
+							<a href="#"><div class="social-badge twt"><i class="fa fa-twitter"></i></div></a>
+							<a href="#"><div class="social-badge gp"><i class="fa fa-google-plus"></i></div></a>
+							<a href="#"><div class="social-badge li"><i class="fa fa-linkedin"></i></div></a>
+							<a href="#"><div class="social-badge yt"><i class="fa fa-youtube"></i></div></a>
+							<a href="#"><div class="social-badge vi"><i class="fa fa-vimeo"></i></div></a>
+							<a href="#"><div class="social-badge pi"><i class="fa fa-pinterest-p"></i></div></a>
+							<a href="#"><div class="social-badge inst"><i class="fa fa-instagram"></i></div></a>
+						</div>
+					</div>
+				</div>			</div>
+		</div>
+
+		<!-- Articles & quotes -->
+		<div class="content-area greyed">
+			<div class="content-container">
+				<div class="row">
+					<div class="col-sm-8">
+						<h2>Article</h2>
+						
+						<ul class="article-list">
+							<li class="article">
+								<div class="article-title">Need help with content creation? Contact a Moovly Partner!</div>
+								<div class="article-date">Sep 08, 2015 by Kaat Van de Vijver</div>
+								<div class="article-content">We're happy to introduce you to a few new Moovly Partners! Our partners offer a wide range of Moovly based services, including the creation of custom library objects in your style or the production of a custom video in Moovly, which you can edit afterwards.</div>
+								<a href="#" class="more">Read more » </a>
+							</li>
+						</ul>					</div>
+					<div class="col-sm-4">
+						<h2>Quote</h2>
+						<div class="quote">
+							<div class="quote-text">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere, velit a tincidunt vestibulum, turpis risus volutpat felis, vel rhoncus sem nisi vel risus.
+							</div>
+							<div class="quote-author">
+								<span>John Doe</span> - President of the USA
+							</div>
+						</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Panels -->
+		<div class="content-area">
+			<div class="content-container">
+				<h2>Panels</h2>
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="mv-side-panel tip-panel">
+							<div class="side-panel-title">Tip:</div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas neque ipsum, consectetur at pulvinar non, cursus non nisl.</p>
+						</div>
+						
+						<div class="mv-side-panel msg-panel">
+							<div class="side-panel-title">Message:</div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas neque ipsum, consectetur at pulvinar non, cursus non nisl.</p>
+						</div>					</div>
+					<div class="col-sm-4">
+						<div class="mv-side-panel tip-panel">
+							<div class="side-panel-title">Tip:</div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas neque ipsum, consectetur at pulvinar non, cursus non nisl.</p>
+						</div>
+						
+						<div class="mv-side-panel msg-panel">
+							<div class="side-panel-title">Message:</div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas neque ipsum, consectetur at pulvinar non, cursus non nisl.</p>
+						</div>					</div>
+				</div>				
+			</div>
+		</div>
+
+		<!-- Gallery -->
+		<div class="content-area greyed">
+			<div class="content-container">
+				<h2>Gallery</h2>
+				<div class="grid gallery-grid">
+					<div class="grid-item spacer"></div>
+				  	<div class="grid-item gallery-span-6">
+				  		<div class="gallery-item">
+				  			<img class="gallery-thumb" src="http://placehold.it/600x350">
+							<div class="gallery-thumb-wrapper">
+								<div class="gallery-thumb-info">
+									<div class="gallery-thumb-info-wrapper">
+										<div class="gallery-thumb-title">Birthday Sarah</div>
+										<div class="gallery-thumb-actions">
+											<div class="mv-gallery-button">
+												<i class="fa fa-eye"></i>
+											</div>
+											<div class="mv-gallery-button">
+												<i class="fa fa-pencil"></i>
+											</div>
+											<div class="mv-gallery-button pull-right">
+												<i class="fa fa-trash"></i>
+											</div>
+											<!-- <div class="mv-gallery-play">
+												<i class="fa fa-play"></i>
+											</div>
+											<div class="meta">123 views</div> -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				  	</div>
+				  	<div class="grid-item gallery-span-3">
+				  		<div class="gallery-item">
+				  			<img class="gallery-thumb" src="http://placehold.it/600x350">
+							<div class="gallery-thumb-wrapper">
+								<div class="gallery-thumb-info">
+									<div class="gallery-thumb-info-wrapper">
+										<div class="gallery-thumb-title">Birthday Sarah</div>
+										<div class="gallery-thumb-actions">
+											<div class="mv-gallery-button">
+												<i class="fa fa-eye"></i>
+											</div>
+											<div class="mv-gallery-button">
+												<i class="fa fa-pencil"></i>
+											</div>
+											<div class="mv-gallery-button pull-right">
+												<i class="fa fa-trash"></i>
+											</div>
+											<!-- <div class="mv-gallery-play">
+												<i class="fa fa-play"></i>
+											</div>
+											<div class="meta">123 views</div> -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				  	</div>
+				  	<div class="grid-item gallery-span-3">
+				  		<div class="gallery-item">
+				  			<img class="gallery-thumb" src="http://placehold.it/600x350">
+							<div class="gallery-thumb-wrapper">
+								<div class="gallery-thumb-info">
+									<div class="gallery-thumb-info-wrapper">
+										<div class="gallery-thumb-title">Birthday Sarah</div>
+										<div class="gallery-thumb-actions">
+											<div class="mv-gallery-button">
+												<i class="fa fa-eye"></i>
+											</div>
+											<div class="mv-gallery-button">
+												<i class="fa fa-pencil"></i>
+											</div>
+											<div class="mv-gallery-button pull-right">
+												<i class="fa fa-trash"></i>
+											</div>
+											<!-- <div class="mv-gallery-play">
+												<i class="fa fa-play"></i>
+											</div>
+											<div class="meta">123 views</div> -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				  	</div>
+				  	<div class="grid-item gallery-span-3">
+				  		<div class="gallery-item">
+				  			<img class="gallery-thumb" src="http://placehold.it/600x350">
+							<div class="gallery-thumb-wrapper">
+								<div class="gallery-thumb-info">
+									<div class="gallery-thumb-info-wrapper">
+										<div class="gallery-thumb-title">Birthday Sarah</div>
+										<div class="gallery-thumb-actions">
+											<div class="mv-gallery-button">
+												<i class="fa fa-eye"></i>
+											</div>
+											<div class="mv-gallery-button">
+												<i class="fa fa-pencil"></i>
+											</div>
+											<div class="mv-gallery-button pull-right">
+												<i class="fa fa-trash"></i>
+											</div>
+											<!-- <div class="mv-gallery-play">
+												<i class="fa fa-play"></i>
+											</div>
+											<div class="meta">123 views</div> -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				  	</div>
+				  	<div class="grid-item gallery-span-3">
+				  		<div class="gallery-item">
+				  			<img class="gallery-thumb" src="http://placehold.it/600x350">
+							<div class="gallery-thumb-wrapper">
+								<div class="gallery-thumb-info">
+									<div class="gallery-thumb-info-wrapper">
+										<div class="gallery-thumb-title">Birthday Sarah</div>
+										<div class="gallery-thumb-actions">
+											<div class="mv-gallery-button">
+												<i class="fa fa-eye"></i>
+											</div>
+											<div class="mv-gallery-button">
+												<i class="fa fa-pencil"></i>
+											</div>
+											<div class="mv-gallery-button pull-right">
+												<i class="fa fa-trash"></i>
+											</div>
+											<!-- <div class="mv-gallery-play">
+												<i class="fa fa-play"></i>
+											</div>
+											<div class="meta">123 views</div> -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				  	</div>
+				</div>
+				
+				<div class="grid gallery-grid">
+					<div class="grid-item spacer"></div>
+					<div class="grid-item gallery-span-3">
+				  		<div class="gallery-item">
+				  			<img class="gallery-thumb" src="http://placehold.it/600x350">
+							<div class="gallery-thumb-wrapper">
+								<div class="gallery-thumb-info">
+									<div class="gallery-thumb-info-wrapper">
+										<div class="gallery-thumb-title">Birthday Sarah</div>
+										<div class="gallery-thumb-actions">
+											<div class="mv-gallery-button">
+												<i class="fa fa-eye"></i>
+											</div>
+											<div class="mv-gallery-button">
+												<i class="fa fa-pencil"></i>
+											</div>
+											<div class="mv-gallery-button pull-right">
+												<i class="fa fa-trash"></i>
+											</div>
+											<!-- <div class="mv-gallery-play">
+												<i class="fa fa-play"></i>
+											</div>
+											<div class="meta">123 views</div> -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				  	</div>
+				  	<div class="grid-item gallery-span-3">
+				  		<div class="gallery-item">
+				  			<img class="gallery-thumb" src="http://placehold.it/600x350">
+							<div class="gallery-thumb-wrapper">
+								<div class="gallery-thumb-info">
+									<div class="gallery-thumb-info-wrapper">
+										<div class="gallery-thumb-title">Birthday Sarah</div>
+										<div class="gallery-thumb-actions">
+											<div class="mv-gallery-button">
+												<i class="fa fa-eye"></i>
+											</div>
+											<div class="mv-gallery-button">
+												<i class="fa fa-pencil"></i>
+											</div>
+											<div class="mv-gallery-button pull-right">
+												<i class="fa fa-trash"></i>
+											</div>
+											<!-- <div class="mv-gallery-play">
+												<i class="fa fa-play"></i>
+											</div>
+											<div class="meta">123 views</div> -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				  	</div>
+				  	<div class="grid-item gallery-span-3">
+				  		<div class="gallery-item">
+				  			<img class="gallery-thumb" src="http://placehold.it/600x350">
+							<div class="gallery-thumb-wrapper">
+								<div class="gallery-thumb-info">
+									<div class="gallery-thumb-info-wrapper">
+										<div class="gallery-thumb-title">Birthday Sarah</div>
+										<div class="gallery-thumb-actions">
+											<div class="mv-gallery-button">
+												<i class="fa fa-eye"></i>
+											</div>
+											<div class="mv-gallery-button">
+												<i class="fa fa-pencil"></i>
+											</div>
+											<div class="mv-gallery-button pull-right">
+												<i class="fa fa-trash"></i>
+											</div>
+											<!-- <div class="mv-gallery-play">
+												<i class="fa fa-play"></i>
+											</div>
+											<div class="meta">123 views</div> -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				  	</div>
+				  	<div class="grid-item gallery-span-3">
+				  		<div class="gallery-item">
+				  			<img class="gallery-thumb" src="http://placehold.it/600x350">
+							<div class="gallery-thumb-wrapper">
+								<div class="gallery-thumb-info">
+									<div class="gallery-thumb-info-wrapper">
+										<div class="gallery-thumb-title">Birthday Sarah</div>
+										<div class="gallery-thumb-actions">
+											<div class="mv-gallery-button">
+												<i class="fa fa-eye"></i>
+											</div>
+											<div class="mv-gallery-button">
+												<i class="fa fa-pencil"></i>
+											</div>
+											<div class="mv-gallery-button pull-right">
+												<i class="fa fa-trash"></i>
+											</div>
+											<!-- <div class="mv-gallery-play">
+												<i class="fa fa-play"></i>
+											</div>
+											<div class="meta">123 views</div> -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				  	</div>
+				</div>			</div>
+		</div>
+
+		<!-- Panels -->
+		<div class="content-area">
+			<div class="content-container">
+				<h2>Widgets</h2>
+				<br>
+				<div class="row">
+					<div class="col-sm-6 feature-reel">
+						<div class="feature-reel-item">
+							<div class="item-badge"><i class="fa fa-laptop"></i></div>
+							<div class="item-content">
+								<div class="item-title">All you need is a browser</div>
+								<div class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+							</div>
+						</div>
+						<div class="feature-reel-item">
+							<div class="item-badge"><i class="fa fa-hand-pointer-o"></i></div>
+							<div class="item-content">
+								<div class="item-title">Drag & Drop based</div>
+								<div class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 feature-reel">
+						<div class="feature-reel-item">
+							<div class="item-badge"><i class="fa fa-share-alt"></i></div>
+							<div class="item-content">
+								<div class="item-title">Sharing is caring</div>
+								<div class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+							</div>
+						</div>
+				
+						<div class="feature-reel-item">
+							<div class="item-badge"><i class="fa fa-arrow-up"></i></div>
+							<div class="item-content">
+								<div class="item-title">Export to most formats</div>
+								<div class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-4 mv-step">
+						<i class="fa fa-lightbulb-o"></i>
+						<div class="title">Create</div>
+						<p class="muted">
+							Make videos or presentations using library objects and free templates. Add your own images, sounds and video clips.
+						</p>
+					</div>
+					<div class="col-xs-4 mv-step">
+						<i class="fa fa-pencil"></i>
+						<div class="title">Manage</div>
+						<p class="muted">
+							Easily edit, view, name, describe, copy, delete and restore the videos you created with Moovly. 
+						</p>
+					</div>
+					<div class="col-xs-4 mv-step">
+						<i class="fa fa-share-alt"></i>
+						<div class="title">Share</div>
+						<p class="muted">
+							Share your videos with team members, publish them to YouTube & Facebook or download them for offline use.
+						</p>
+					</div>
+				</div>			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer>
+			<div class="content-container">
+				<div class="row">
+					<div class="col-xs-3">
+						<ul>
+							<li>Moovly</li>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Gallery</a></li>
+							<li><a href="#">Plans & Pricing</a></li>
+							<li><a href="#">Marketplace</a></li>
+						</ul>
+					</div>
+					<div class="col-xs-3">
+						<ul>
+							<li>About</li>
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Partners</a></li>
+						</ul>
+					</div>
+					<div class="col-xs-3">
+						<ul>
+							<li>Support</li>
+							<li><a href="#">FAQs</a></li>
+							<li><a href="#">User Guide</a></li>
+							<li><a href="#">Training</a></li>
+							<li><a href="#">Contact us</a></li>
+						</ul>
+					</div>
+					<div class="col-xs-3">
+						<ul>
+							<li>Solutions</li>
+							<li><a href="#">Personal</a></li>
+							<li><a href="#">Business</a></li>
+							<li><a href="#">Education</a></li>
+						</ul>
+					</div>
+				</div>
+		
+		
+				<div class="under-footer pull-left">©2014 Moovly, All rights reserved</div>
+				<div class="social-icons pull-right">
+					<a href="#"><div class="social-badge fb"><i class="fa fa-facebook"></i></div></a>
+					<a href="#"><div class="social-badge twt"><i class="fa fa-twitter"></i></div></a>
+					<a href="#"><div class="social-badge gp"><i class="fa fa-google-plus"></i></div></a>
+					<a href="#"><div class="social-badge li"><i class="fa fa-linkedin"></i></div></a>
+					<a href="#"><div class="social-badge yt"><i class="fa fa-youtube"></i></div></a>
+					<a href="#"><div class="social-badge vi"><i class="fa fa-vimeo"></i></div></a>
+					<a href="#"><div class="social-badge pi"><i class="fa fa-pinterest-p"></i></div></a>
+					<a href="#"><div class="social-badge inst"><i class="fa fa-instagram"></i></div></a>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</footer>
 		<!-- Add vendor scripts here -->
 		<!-- Example -->
 		<!-- <script src="vendor/jquery/dist/jquery.min.js"></script> -->
-		<script src="js/main.js"></script> 
+		<script src="js/built.js"></script> 
 	</body>
 </html>

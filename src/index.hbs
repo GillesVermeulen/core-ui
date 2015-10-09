@@ -8,15 +8,99 @@
 		<meta charset="utf-8">
 		<title>Cloudoki - static</title>
 		
+		<link href='vendor/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+		<link href='vendor/font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/main.css">
-		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="vendor/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
 
 	</head>
 	<body>
 
+		<!-- Header -->
+		{{>header}}
+
+		<!-- Content Areas -->
+		{{>areas}}
+
+		<!-- Fonts & Buttons -->
+		<div class="content-area greyed">
+			<div class="content-container">
+				<div class="row">
+					<div class="col-sm-8">
+						<h2>Fonts</h2>
+						{{>fonts}}
+					</div>
+					<div class="col-sm-4">
+						<h2>Buttons</h2>
+						{{>buttons}}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Badges -->
+		<div class="content-area">
+			<div class="content-container">
+				{{>badges}}
+			</div>
+		</div>
+
+		<!-- Articles & quotes -->
+		<div class="content-area greyed">
+			<div class="content-container">
+				<div class="row">
+					<div class="col-sm-8">
+						<h2>Article</h2>
+						{{>articles}}
+					</div>
+					<div class="col-sm-4">
+						<h2>Quote</h2>
+						{{>quote}}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Panels -->
+		<div class="content-area">
+			<div class="content-container">
+				<h2>Panels</h2>
+				<div class="row">
+					<div class="col-sm-8">
+						{{>sidepanel}}
+					</div>
+					<div class="col-sm-4">
+						{{>sidepanel}}
+					</div>
+				</div>				
+			</div>
+		</div>
+
+		<!-- Gallery -->
+		<div class="content-area greyed">
+			<div class="content-container">
+				<h2>Gallery</h2>
+				{{>gallery}}
+			</div>
+		</div>
+
+		<!-- Panels -->
+		<div class="content-area">
+			<div class="content-container">
+				<h2>Widgets</h2>
+				{{>widgets}}				
+			</div>
+		</div>
+
+		<!-- Footer -->
+		{{>footer}} 
+
 		<!-- Add vendor scripts here -->
 		<!-- Example -->
 		<!-- <script src="vendor/jquery/dist/jquery.min.js"></script> -->
-		<script src="js/main.js"></script> 
+		<script src="js/built.js"></script> 
 	</body>
 </html>

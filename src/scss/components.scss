@@ -33,42 +33,9 @@
 	}
 }
 
-// Content areas
-.content-area {
-	padding: 50px 0;
-
-	> h1, > h2, > h3 {
-		margin-top: 0;
-	}
-
-	&.greyed {
-		background-color: $light-grey;
-
-		.badge-icon {
-			background-color: $white;
-		}
-	}
-
-	&.blued {
-		background-color: $blue;
-		color: $white;
-
-		&.with-icons {
-			background-image: url('../images/bg_icons.png');
-			background-position: 0 0;
-		}
-	}
-
-	&.strip {
-		h2 {
-			margin-bottom: 40px;
-		}
-	}
-}
-
 // Badges
 .badge-group {
-	margin-bottom: 35px;
+	margin: 20px 0;
 	position: relative;
 
 	.badge-icon {
@@ -120,11 +87,13 @@
 // Buttons
 .mv-button {
 	border-radius: 4px;
+	margin-right: 20px;
 	background-color: $green;
 	padding: 8px 35px;
 	display: inline-block;
 	color: $white;
 	box-shadow: 0 2px 0px 0px rgba(0, 0, 0, 0.1);
+	margin-bottom: 10px;
 
 	&:hover {
 		box-shadow: 0 4px 0px 0px rgba(0, 0, 0, 0.1);
@@ -147,6 +116,92 @@
 
 		&:hover {
 			background-color: #1692e5;
+		}
+	}
+
+	&.whited {
+		background-color: $white;
+		color: $blue;
+
+		&:hover {
+			background-color: #f5f5f5;
+		}
+	}
+
+	&.full {
+		width: 100%;
+		text-align: center;
+	}
+
+	&.xl {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		font-size: 1.2em;
+	}
+}
+
+.quote {
+	text-align: left;
+	padding-left: 50px;
+	margin: 20px 0;
+	color: #666;
+	position: relative;
+
+	.quote-author {
+		font-size: .8em;
+		margin-top: 20px;
+
+		span {
+			font-weight: bold;
+		}
+	}
+
+	&:before {
+		content: "\f10d";
+		font: normal normal normal 14px/1 FontAwesome;
+	    font-size: inherit;
+	    text-rendering: auto;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	    position: absolute;
+	    left: 0;
+	    font-size: 30px;
+	    top: 6px;
+	    color: #eee;
+	}
+
+	@media (max-width: 768px) {
+		padding-left: 70px;
+
+		&:before {
+			left: 20px;
+		}
+	}
+}
+
+.article-list {
+	margin-top: 40px;
+
+	.article {
+		margin-bottom: 30px;
+
+		.article-title {
+			font-weight: bold;
+		}
+
+		.article-date {
+			font-size: .7em;
+			color: #999;
+			font-style: italic;
+			margin-top: -5px;
+		}
+
+		.article-content {
+			margin-top: 10px;
+			color: #999;
+		}
+
+		.more {
 		}
 	}
 }

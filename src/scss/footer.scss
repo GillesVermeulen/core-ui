@@ -30,4 +30,19 @@ footer {
 		position: relative;
 		top: 20px;
 	}
+
+	@media (max-width: 550px){
+		text-align: center;
+		padding-top: 30px;
+		font-size: .8em;
+
+		.under-footer {	
+			float: none !important;
+		}
+
+		.social-icons {
+			float: none !important;
+			top: 0;
+		}
+	}
 }

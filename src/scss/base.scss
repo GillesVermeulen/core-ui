@@ -1,0 +1,70 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 1.8em;
+	color: $grey;
+}
+
+// fonts 
+h1, h2, h3 {
+	font-weight: 300;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 35px;
+}
+
+a {
+	color: $blue;
+
+	&:hover {
+		color: $blue;
+	}
+}
+
+ul {
+	padding-left: 0;
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+p {
+	margin-bottom: 20px;
+}
+
+.content-container {
+	max-width: 1000px;
+	margin: 0 auto;
+
+	@media (min-width: 1200px) {
+		max-width: 1100px;
+	}
+
+	@media (min-width: 1300px) {
+		max-width: 1200px;
+	}
+
+	@media (max-width: 1000px) {
+		padding: 0 15px;
+	}
+}
+
+.center {
+	text-align: center;
+}
+
+.muted {
+	color: #999;
+}
+
+.clearfix {
+	clear: both;
+}

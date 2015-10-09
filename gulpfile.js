@@ -4,6 +4,7 @@ var del = require('del');
 
 // Include Our Plugins
 var jshint = require('gulp-jshint');
+var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
@@ -34,12 +35,11 @@ gulp.task('copy:images', function() {
 });
 gulp.task('copy:scripts', function() {
     return gulp.src([
-            /*  
-             * Add vendor scripts here
-             * 
-             * Example:
-             * dirs.source+'/vendor/jquery/dist/jquery.min.js', 
-             */
+            dirs.source+'/vendor/jquery/dist/jquery.min.js', 
+            dirs.source+'/vendor/bootstrap/dist/css/bootstrap.min.css',
+            dirs.source+'/vendor/bootstrap/dist/js/bootstrap.min.js',
+            dirs.source+'/vendor/font-awesome/css/font-awesome.min.css',
+            dirs.source+'/vendor/font-awesome/fonts/*'
         ]).pipe(copy(dirs.release, {prefix: 1}));
 });
 
@@ -87,7 +87,9 @@ gulp.task('minify', function() {
 // Compile Sass
 gulp.task('sass', function() {
     return gulp.src(dirs.source+'/scss/main.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass())
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(dirs.release+'/css'));
 });
 

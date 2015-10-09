@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "homepage": "www.cloudoki.com",
   "authors": [
-    "Rui Molefas <molefas@gmail.com>"
+    "Rui Molefas <rui@cloudoki.com>"
   ],
   "moduleType": [
     "amd"
   ],
   "license": "MIT",
-  "devDependencies": {}
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.4.0"
+  },
+  "dependencies": {}
 }
