@@ -327,11 +327,11 @@ header .header {
 
 .mv-step {
   text-align: center;
-  margin-top: 20px; }
+  margin-top: 40px; }
   .mv-step .title {
     font-weight: bold;
     font-size: 1.2em;
-    margin-bottom: 20px; }
+    margin: 20px 0; }
   .mv-step i {
     font-size: 2em; }
 
@@ -406,7 +406,9 @@ header .header {
 
 .gallery-grid {
   margin: 40px 0 30px;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative;
+  right: 5px; }
   .gallery-grid .grid-item.gallery-span-6 {
     width: 50%; }
     @media (max-width: 768px) {
