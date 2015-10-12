@@ -191,16 +191,6 @@ header .header {
   .big-input.focuson {
     box-shadow: 0 0 3px 4px rgba(0, 0, 0, 0.2); }
 
-.badge-group {
-  margin: 20px 0;
-  position: relative; }
-  .badge-group .badge-icon {
-    position: absolute;
-    top: 0;
-    left: 0; }
-  .badge-group .badge-text {
-    padding-left: 50px; }
-
 .badge-icon {
   background-color: #f5f6fa;
   margin-right: 7px;
@@ -212,6 +202,20 @@ header .header {
   line-height: 35px;
   display: inline-block;
   text-align: center; }
+  .badge-icon.big {
+    width: 80px;
+    height: 80px;
+    line-height: 90px; }
+
+.badge-group {
+  margin: 20px 0;
+  position: relative; }
+  .badge-group .badge-icon {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .badge-group .badge-text {
+    padding-left: 50px; }
 
 .social-badge {
   background-color: #f5f6fa;
@@ -329,8 +333,7 @@ header .header {
     font-size: 1.2em;
     margin-bottom: 20px; }
   .mv-step i {
-    font-size: 2em;
-    margin: 30px 0; }
+    font-size: 2em; }
 
 .feature-reel .feature-reel-item {
   position: relative;
@@ -412,8 +415,6 @@ header .header {
   .gallery-grid .grid-item.gallery-span-4 {
     width: 33%;
     font-size: .8em; }
-    .gallery-grid .grid-item.gallery-span-4 .gallery-thumb-title {
-      padding: 10px; }
     @media (max-width: 900px) {
       .gallery-grid .grid-item.gallery-span-4 {
         width: 50%; } }
