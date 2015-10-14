@@ -21,11 +21,11 @@ $('.gallery-item').hover(function(){
 });
 
 // Masonry
-setTimeout(function(){
-	$('.grid').masonry({
-  	// options...
+var $grid = $('.grid').masonry({
   	columnWidth: '.spacer',
 	itemSelector: '.grid-item',
 	percentPosition: true
-	});
-}, 1000);
+});
+$grid.imagesLoaded( function(){
+   $grid.masonry('layout');
+});
