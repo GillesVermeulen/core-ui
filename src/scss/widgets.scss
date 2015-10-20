@@ -1,4 +1,5 @@
-// Steps
+//**********************//
+//******* Steps *******// 
 .mv-step {
 	text-align: center;
 	margin-top: 40px;
@@ -14,6 +15,8 @@
 	}
 }
 
+//************************//
+//******* Features *******// 
 .feature-reel {
 
 	.feature-reel-item {
@@ -62,6 +65,9 @@
 	}
 }
 
+
+//*************************//
+//******* Solutions *******// 
 .solutions-wrapper {
 
 	max-width: 900px;
@@ -115,3 +121,43 @@
 		}
 	}
 }
+
+//************************//
+//******* Progress *******// 
+.mv-progress{
+    border-width:1px 0;
+    list-style:none;
+    margin-bottom: 50px;
+    text-align:center;
+    color: #cacbcd;
+
+    > li {
+    	display: inline;
+    	margin: 0 20px;
+
+    	&:after {
+    		content: "\f105";
+			font: normal normal normal 14px/1 FontAwesome;
+		    font-size: inherit;
+		    text-rendering: auto;
+		    -webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+		    font-size: 30px;
+		    position: relative;
+		    top: 4px;
+		    left: 20px;
+    	}
+
+    	&.active {
+    		color: $grey;
+    		font-weight: 400;
+    	}
+
+    	&:last-child {
+    		&:after {
+    			content: "";
+    		}
+    	}
+    }
+}
+

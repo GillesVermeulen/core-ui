@@ -12,6 +12,13 @@
 		.badge-icon {
 			background-color: $white;
 		}
+
+		.mv-side-panel {
+			border-color: $light-grey;
+			&:before {
+				border-color: $light-grey;
+			}
+		}
 	}
 
 	&.blued {
@@ -53,6 +60,13 @@
 		margin-bottom: 10px;
 	}
 
+	.separator {
+		padding: 2px;
+		background-color: $light-grey;	
+		margin: 20px 0;
+		border: none;
+	}
+
 	&:before {
 		content: "";
 	    font: normal normal normal 14px/1 FontAwesome;
@@ -85,4 +99,76 @@
 			content: "\f0e0";
 		}
 	}
+
+	&.cart-panel {
+		&:before {
+			content: "\f07a";
+		}
+	}
+
+	&.no-icon {
+		&:before {
+			display: none;
+		}
+	}
+
+	&.whited {
+		background-color: $white;
+		&:before {
+			background-color: $white;
+		}
+	}
 }
+
+.mv-side-panel-tabs {
+	ul {
+		li {
+			a {
+				font-size: .8em;
+				padding: 10px 0 10px 30px;
+				display: block;
+				text-decoration: none;
+
+				&:hover {
+					background-color: $white;
+				}
+				&.active {
+					background-color: $white;
+					color: $grey;
+				}
+			}
+		}
+	}
+}
+
+.mv-tab-panel {
+	.mv-side-panel-tabs {
+		position: relative;
+		left: 15px;
+		top: 30px;
+	}
+	.mv-tab-content {
+		display: none;
+		
+		&.active {
+			display: block;
+		}
+	}
+}
+
+.mv-info-block {
+	margin-bottom: 30px;
+
+	h3 {
+		font-size: 1.2em;
+		margin-bottom: 20px;
+	}
+
+	.article-title {
+		font-size: .8em;
+		line-height: 1.4em;
+	}
+}
+
+
+
