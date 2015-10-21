@@ -42,6 +42,16 @@ img {
 
 p {
 	margin-bottom: 20px;
+
+	a {
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+
+		&:hover {
+			color: $dark-blue;
+			text-decoration: none;
+			border-bottom: 1px solid $dark-blue;			
+		}
+	}
 }
 
 .btn-default {

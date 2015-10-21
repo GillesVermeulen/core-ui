@@ -32,6 +32,12 @@ img {
 
 p {
   margin-bottom: 20px; }
+  p a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+    p a:hover {
+      color: #1692e5;
+      text-decoration: none;
+      border-bottom: 1px solid #1692e5; }
 
 .btn-default {
   color: #666;
@@ -311,6 +317,8 @@ header .header {
 
 .label.mv-label {
   background-color: #189df7; }
+  .label.mv-label:hover {
+    background-color: #1692e5; }
 
 .mv-button {
   border-radius: 4px;
@@ -399,6 +407,13 @@ header .header {
   .article-list .article .article-content {
     margin-top: 10px;
     color: #999; }
+  .article-list .article a.article-content {
+    text-decoration: none; }
+  .article-list .article a .article-title {
+    color: #666; }
+  .article-list .article a:hover .article-title {
+    text-decoration: underline;
+    color: #666; }
 
 .article-list.list .article {
   margin-bottom: 10px;
@@ -415,6 +430,15 @@ header .header {
   .article-list.list .article .article-date {
     padding-left: 25%;
     margin-left: 10px; }
+
+.article-list.list a {
+  text-decoration: none; }
+  .article-list.list a .article .article-title {
+    color: #666; }
+  .article-list.list a .article .article-date {
+    color: #999; }
+  .article-list.list a:hover .article .article-title {
+    text-decoration: underline; }
 
 .mv-step {
   text-align: center;
@@ -491,9 +515,11 @@ header .header {
   .solutions-wrapper:after {
     clear: both; }
   @media (max-width: 768px) {
-    .solutions-wrapper .solution {
-      display: block;
-      width: 100%; } }
+    .solutions-wrapper {
+      border-spacing: 0; }
+      .solutions-wrapper .solution {
+        display: block;
+        width: 100%; } }
 
 .mv-progress {
   border-width: 1px 0;
@@ -520,6 +546,29 @@ header .header {
       font-weight: 400; }
     .mv-progress > li:last-child:after {
       content: ""; }
+
+.mv-pagination {
+  margin: 40px 0;
+  text-align: center;
+  list-style: none;
+  font-size: .8em; }
+  .mv-pagination > li {
+    display: inline; }
+    .mv-pagination > li a {
+      color: #999;
+      padding: 5px 10px; }
+      .mv-pagination > li a.active {
+        background-color: #189df7;
+        color: #fff;
+        border-radius: 4px; }
+      .mv-pagination > li a.previous {
+        margin-right: 10px; }
+        .mv-pagination > li a.previous > i {
+          margin-right: 10px; }
+      .mv-pagination > li a.next {
+        margin-left: 10px; }
+        .mv-pagination > li a.next > i {
+          margin-left: 10px; }
 
 .gallery-grid {
   margin: 40px 0 30px;
