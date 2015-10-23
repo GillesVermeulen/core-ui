@@ -34,6 +34,27 @@ a {
 ul {
 	padding-left: 0;
 	list-style: none;
+
+	&.arrowed {
+		margin-left: 30px;
+
+		li {
+			&:before {
+				content: "\f101";
+				font: normal normal normal 14px/1 FontAwesome;
+			    font-size: inherit;
+			    text-rendering: auto;
+			    -webkit-font-smoothing: antialiased;
+			    -moz-osx-font-smoothing: grayscale;
+			    color: $blue;
+			    margin-right: 10px;
+			}
+		}
+
+		&.no-margin {
+			margin-left: 0;
+		}
+	}
 }
 
 img {

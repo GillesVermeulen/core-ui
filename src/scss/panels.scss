@@ -19,6 +19,12 @@
 				border-color: $light-grey;
 			}
 		}
+
+		.quote {
+			&:before {
+				color: #fff;
+			}
+		}
 	}
 
 	&.blued {
@@ -28,6 +34,13 @@
 		&.with-icons {
 			background-image: url('../images/bg_icons.png');
 			background-position: 0 0;
+		}
+
+		.quote {
+			color: #fff;
+			&:before {
+				color: #fff;
+			}
 		}
 	}
 

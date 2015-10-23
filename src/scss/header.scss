@@ -57,6 +57,89 @@ header {
 			    @media (max-width: 768px) {
 			    	padding: 0;
 			    }
+
+			    ul {
+			    	&.blog-menu {
+			    		width: 600px;
+			    		padding: 10px 0 0 0;
+			    		left: -260px;
+			    		top: 65px;
+			    		border: none;
+			    		box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+
+				    	li {
+				    		padding: 10px 20px;
+				    		margin-left: 0;
+				    		min-height: 65px;
+
+				    		.blog-article {
+				    			position: relative;
+				    			padding: 0 10px;
+
+				    			a {
+				    				color: $grey;
+				    				
+				    				.blog-article-thumb {
+						    			max-width: 40px;
+						    			position: absolute;
+						    			left: 15px;
+						    			top: 0;
+
+						    			img {
+						    				border-radius: 4px;
+						    			}
+						    		}
+
+						    		.blog-article-title {
+						    			padding-left: 50px;
+						    			font-weight: 400;
+						    			font-size: .9em;
+						    			line-height: 1.3em;
+						    		}
+				    			}
+				    		}
+
+				    		&.more {
+				    			min-height: 0;
+				    			padding: 0;
+				    			text-align: center;
+
+				    			a {
+				    				text-transform: lowercase;
+				    				border-bottom: none;
+				    				font-size: .8em;
+				    				color: $blue;
+
+				    				&:hover {
+				    					background-color: #eee;
+				    					color: $dark-blue;
+				    				}
+				    			}
+				    		}
+
+				    		&:nth-child(odd) {
+				    			background-color: $light-grey;
+				    		}
+				    	}
+
+				    	> i {
+				    		top: -30px;
+						    position: absolute;
+						    left: 285px;
+						    font-size: 45px;
+						    color: #fff;
+						    text-shadow: 0px -4px 4px rgba(0,0,0,0.05);
+				    	}
+
+				    	@media (max-width: 900px) {
+				    		left: -356px;
+
+				    		> i {
+				    			left: 374px;
+				    		}
+				    	}
+				    }
+			    }
 			}
 		}
 

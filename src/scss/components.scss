@@ -213,6 +213,34 @@
 	    color: #eee;
 	}
 
+	&.single-quote {
+		text-align: center;
+		padding-right: 70px;
+		padding-left: 70px;
+
+		.quote-text {
+			font-size: 1.3em;
+		}
+
+		&:before {
+			font-size: 50px;
+		}
+
+		&:after {
+			content: "\f10e";
+			font: normal normal normal 14px/1 FontAwesome;
+		    font-size: inherit;
+		    text-rendering: auto;
+		    -webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+		    position: absolute;
+		    right: 0;
+		    font-size: 50px;
+		    top: 6px;
+		    color: #fff;
+		}
+	}
+
 	@media (max-width: 768px) {
 		padding-left: 70px;
 
@@ -274,7 +302,7 @@
 		.article {
 			margin-bottom: 10px;
 			position: relative;
-			min-height: 65px;
+			min-height: 69px;
 
 			.article-thumb {
 				position: absolute;
