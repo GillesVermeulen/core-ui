@@ -152,7 +152,8 @@ header {
 				    	}
 				    }
 
-				    &.solutions-menu {
+				    &.solutions-menu,
+				    &.user-menu {
 				    	width: 100px;
 			    		left: -25px;
 			    		top: 65px;
@@ -179,6 +180,16 @@ header {
 				    		> i {
 				    			display: none;
 				    		}
+				    	}
+				    }
+
+				    &.user-menu {
+				    	left: initial;
+				    	right: 0;
+
+				    	> i {
+				    		right: 7px;
+				    		left: initial;
 				    	}
 				    }
 			    }
