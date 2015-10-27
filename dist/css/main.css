@@ -122,18 +122,37 @@ header nav {
       header nav ul.navbar-right {
         padding: 0; } }
     header nav ul.navbar-right ul.dropdown-menu {
-      padding: 0; }
+      padding: 0;
+      width: 100px;
+      left: -25px;
+      top: 65px;
+      border: none;
+      box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+      font-size: 1em; }
       header nav ul.navbar-right ul.dropdown-menu li {
         margin-left: 0; }
-        header nav ul.navbar-right ul.dropdown-menu li a:hover {
-          border-bottom-color: #f5f5f5; }
+        header nav ul.navbar-right ul.dropdown-menu li a {
+          color: #777; }
+          header nav ul.navbar-right ul.dropdown-menu li a:hover {
+            border-bottom-color: #f5f5f5; }
+      header nav ul.navbar-right ul.dropdown-menu > i {
+        top: -30px;
+        position: absolute;
+        left: 65px;
+        font-size: 45px;
+        color: #fff;
+        text-shadow: 0px -4px 4px rgba(0, 0, 0, 0.05); }
+      @media (max-width: 768px) {
+        header nav ul.navbar-right ul.dropdown-menu > i {
+          display: none; } }
     header nav ul.navbar-right ul.blog-menu {
       width: 600px;
       padding: 10px 0 0 0;
       left: -260px;
       top: 65px;
       border: none;
-      box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2); }
+      box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+      font-size: .8em; }
       header nav ul.navbar-right ul.blog-menu li {
         padding: 10px 20px;
         min-height: 65px; }
@@ -180,29 +199,6 @@ header nav {
           left: -356px; }
           header nav ul.navbar-right ul.blog-menu > i {
             left: 374px; } }
-    header nav ul.navbar-right ul.solutions-menu,
-    header nav ul.navbar-right ul.user-menu {
-      width: 100px;
-      left: -25px;
-      top: 65px;
-      border: none;
-      box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
-      font-size: 1em; }
-      header nav ul.navbar-right ul.solutions-menu > i,
-      header nav ul.navbar-right ul.user-menu > i {
-        top: -30px;
-        position: absolute;
-        left: 65px;
-        font-size: 45px;
-        color: #fff;
-        text-shadow: 0px -4px 4px rgba(0, 0, 0, 0.05); }
-      header nav ul.navbar-right ul.solutions-menu li a,
-      header nav ul.navbar-right ul.user-menu li a {
-        color: #777; }
-      @media (max-width: 768px) {
-        header nav ul.navbar-right ul.solutions-menu > i,
-        header nav ul.navbar-right ul.user-menu > i {
-          display: none; } }
     header nav ul.navbar-right ul.user-menu {
       left: initial;
       right: 0; }
