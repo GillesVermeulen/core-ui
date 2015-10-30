@@ -39,6 +39,9 @@ ul {
       margin-right: 10px; }
     ul.arrowed.no-margin {
       margin-left: 0; }
+  ul.dropdown-menu {
+    max-height: 220px;
+    overflow: auto; }
 
 img {
   max-width: 100%; }
