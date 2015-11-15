@@ -849,6 +849,7 @@ header .header {
       cursor: pointer; }
       .gallery-grid .gallery-item.active .gallery-thumb-title {
         min-height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
         -webkit-transition: all .15s ease-in-out 0s;
         transition: all .15s ease-in-out 0s; }
       .gallery-grid .gallery-item.active .gallery-thumb-actions {
