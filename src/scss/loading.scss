@@ -1,0 +1,30 @@
+.mv-loading {
+	&.loading {
+		text-align: center;   	
+	
+		&:after {
+			content: "\f021";
+			display: inline-block;
+		    font: normal normal normal 14px/1 FontAwesome;
+		    font-size: inherit;
+		    text-rendering: auto;
+		    -webkit-font-smoothing: antialiased;
+		    -webkit-animation:spin 1s linear infinite;
+	    	-moz-animation:spin 1s linear infinite;
+	    	animation:spin 1s linear infinite;
+	    	opacity: .3;
+		}
+
+		&.page-loading {
+			font-size: 5em;
+
+			&:after {
+				margin-top: 100px;
+			}
+		}
+
+		@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+		@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+		@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+	}
+}
