@@ -102,7 +102,7 @@ p {
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; }
 
 header nav {
-  min-height: 60px !important;
+  min-height: 82px !important;
   background-color: #fff !important; }
   header nav ul.navbar-right {
     padding: 20px 0;
