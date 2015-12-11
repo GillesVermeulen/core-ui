@@ -75,6 +75,10 @@ p {
 	}
 }
 
+.alert-dismissable .close, .alert-dismissible .close {
+	right: 0;
+}
+
 .btn-default {
 	color: #666;
 	font-weight: 300;

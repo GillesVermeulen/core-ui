@@ -52,6 +52,9 @@ p {
       text-decoration: none;
       border-bottom: 1px solid #1692e5; }
 
+.alert-dismissable .close, .alert-dismissible .close {
+  right: 0; }
+
 .btn-default {
   color: #666;
   font-weight: 300; }
