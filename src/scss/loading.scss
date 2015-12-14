@@ -1,4 +1,8 @@
 .mv-loading {
+	.loading-watermark {
+		display: none;
+	}
+
 	&.loading {
 		text-align: center;   	
 	
@@ -17,6 +21,15 @@
 
 		&.page-loading {
 			font-size: 5em;
+
+			.loading-watermark {
+				display: block;
+			    position: relative;
+			    top: 240px;
+			    max-width: 100px;
+			    opacity: .3;
+			    margin: 0 auto;
+			}
 
 			&:after {
 				margin-top: 100px;
