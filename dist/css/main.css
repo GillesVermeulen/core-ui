@@ -911,20 +911,69 @@ header .header {
   .project-view .dropdown {
     display: inline-block; }
 
-.video-js {
+.video-js.vjs-default-skin {
   width: 100%;
   height: 100%; }
-  .video-js .vjs-control-bar,
-  .video-js .vjs-progress-control {
+  .video-js.vjs-default-skin .vjs-progress-control {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: auto;
+    font-size: 0.3em;
+    height: 1em;
+    top: -1em;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s; }
+    .video-js.vjs-default-skin .vjs-progress-control .vjs-slider {
+      background: rgba(215, 215, 215, 0.233333);
+      margin: 0; }
+    .video-js.vjs-default-skin .vjs-progress-control .vjs-progress-holder {
+      height: 100%;
+      outline: 0;
+      position: relative;
+      cursor: pointer;
+      padding: 0; }
+    .video-js.vjs-default-skin .vjs-progress-control .vjs-load-progress,
+    .video-js.vjs-default-skin .vjs-progress-control .vjs-play-progress {
+      height: 100%; }
+    .video-js.vjs-default-skin .vjs-progress-control .vjs-play-progress {
+      background: rgba(255, 255, 255, 0.7); }
+      .video-js.vjs-default-skin .vjs-progress-control .vjs-play-progress:before {
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s;
+        -webkit-transition-delay: 0s;
+        /* Safari */ }
+    .video-js.vjs-default-skin .vjs-progress-control .vjs-seek-handle {
+      width: 1.5em;
+      height: 100%; }
+  .video-js.vjs-default-skin .vjs-control-bar {
     background: #008fdf; }
-  .video-js .vjs-remaining-time {
+  .video-js.vjs-default-skin .vjs-remaining-time {
     display: none; }
-  .video-js .vjs-load-progress {
+  .video-js.vjs-default-skin .vjs-load-progress {
     background: rgba(255, 255, 255, 0.5); }
-  .video-js .vjs-current-time,
-  .video-js .vjs-time-divider,
-  .video-js .vjs-duration {
+  .video-js.vjs-default-skin .vjs-current-time,
+  .video-js.vjs-default-skin .vjs-time-divider,
+  .video-js.vjs-default-skin .vjs-duration {
     display: block; }
+  .video-js.vjs-default-skin:hover .vjs-progress-control {
+    font-size: .9em;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+  .video-js.vjs-default-skin:hover .vjs-play-progress:before {
+    top: -0.3em;
+    font-size: 1.9em;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+    transition-delay: 0s; }
 
 footer {
   background-color: #363f48;
