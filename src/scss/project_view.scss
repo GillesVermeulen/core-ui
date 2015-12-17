@@ -1,0 +1,44 @@
+.project-view {
+	
+	max-width: 800px;
+	margin: 0 auto;
+	padding-top: 50px;
+
+	h3 {
+		font-weight: bold;
+	}
+
+	.project-actions {
+		margin: 20px 0;
+		overflow: hidden;
+
+		.project-view-social {
+			float: left;
+		}
+
+		.mv-button {
+			color: #666;
+			margin-right: 5px;
+
+			&.pull-right {
+				position: relative;
+				top: 6px;
+			}
+		}
+
+		&:after {
+			content: "";
+			clear: both;
+		}
+	}
+
+	.project-description {
+		font-size: .8em;
+		line-height: 1.4em;
+	}
+
+	.dropdown {
+		display: inline-block;
+		
+	}
+}

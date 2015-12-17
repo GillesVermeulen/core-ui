@@ -88,3 +88,5 @@ if ($('.grid').length) {
      $grid.masonry('layout');
   });
 }
+
+// Player

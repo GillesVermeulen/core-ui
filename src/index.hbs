@@ -10,11 +10,9 @@
 		
 		<link href='vendor/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
 		<link href='vendor/font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+		<link href="http://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/main.css">
 		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
-		<script type="text/javascript" src="vendor/jquery/dist/jquery.min.js"></script>
-		<script type="text/javascript" src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
 
 	</head>
 	<body>
@@ -79,8 +77,16 @@
 			</div>
 		</div>
 
-		<!-- Gallery -->
+		<!-- Player -->
 		<div class="content-area greyed">
+			<div class="content-container">
+				<h2>HTML5 Player</h2>
+				{{>player}}
+			</div>
+		</div>
+
+		<!-- Gallery -->
+		<div class="content-area">
 			<div class="content-container">
 				<h2>Gallery</h2>
 				{{>gallery}}
@@ -99,8 +105,13 @@
 		{{>footer}} 
 
 		<!-- Add vendor scripts here -->
+		<script type="text/javascript" src="vendor/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
+		<script src="http://vjs.zencdn.net/5.4.4/video.js"></script>
 		<!-- Example -->
 		<!-- <script src="vendor/jquery/dist/jquery.min.js"></script> -->
 		<script src="js/built.js"></script> 
+
 	</body>
 </html>

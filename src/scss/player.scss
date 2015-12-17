@@ -1,0 +1,24 @@
+// Videojs override
+.video-js {
+	width: 100%;
+	height: 100%;
+
+	.vjs-control-bar,
+	.vjs-progress-control {
+		background: rgba(0,143,223,1);
+	}
+
+	.vjs-remaining-time {
+		display: none;
+	}
+
+	.vjs-load-progress {
+		background: rgba(255,255,255,.5);
+	}
+
+	.vjs-current-time,
+	.vjs-time-divider,
+	.vjs-duration {
+		display: block;
+	}
+}
