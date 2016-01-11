@@ -11,6 +11,7 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var copy = require('gulp-copy');
 var runSequence = require('run-sequence');
+var mustache = require("gulp-mustache");
 var handlebars = require('handlebars');
 var gulpHandlebars = require('gulp-handlebars-html')(handlebars);
 
@@ -43,7 +44,7 @@ gulp.task('copy:scripts', function() {
         ]).pipe(copy(dirs.release, {prefix: 1}));
 });
 
-// Handlerbars taks
+//Handlerbars taks
 gulp.task('handlebars', function(){
     var templateData = {},
         options = {
@@ -55,6 +56,8 @@ gulp.task('handlebars', function(){
         .pipe(rename('index.html'))
         .pipe(gulp.dest(dirs.release+'/'));
 });
+
+
 
 // Lint Tasks
 gulp.task('lint:before', function() {

@@ -919,7 +919,7 @@ header .header {
     left: 0;
     right: 0;
     width: auto;
-    font-size: 0.3em;
+    font-size: 0.9em;
     height: 1em;
     top: -1em;
     -webkit-transition: all 0.4s;
@@ -941,15 +941,20 @@ header .header {
     .video-js.vjs-default-skin .vjs-progress-control .vjs-play-progress {
       background: rgba(255, 255, 255, 0.7); }
       .video-js.vjs-default-skin .vjs-progress-control .vjs-play-progress:before {
+        font-size: 1.9em;
         -webkit-transition: all 0.2s;
         -moz-transition: all 0.2s;
         -o-transition: all 0.2s;
         transition: all 0.2s;
         -webkit-transition-delay: 0s;
-        /* Safari */ }
+        /* Safari */
+        top: -4px; }
     .video-js.vjs-default-skin .vjs-progress-control .vjs-seek-handle {
       width: 1.5em;
       height: 100%; }
+    .video-js.vjs-default-skin .vjs-progress-control:hover .vjs-play-progress:before {
+      font-size: 1.2em;
+      top: -4px; }
   .video-js.vjs-default-skin .vjs-control-bar {
     background: #008fdf; }
   .video-js.vjs-default-skin .vjs-remaining-time {
@@ -961,14 +966,11 @@ header .header {
   .video-js.vjs-default-skin .vjs-duration {
     display: block; }
   .video-js.vjs-default-skin:hover .vjs-progress-control {
-    font-size: .9em;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s; }
   .video-js.vjs-default-skin:hover .vjs-play-progress:before {
-    top: -0.3em;
-    font-size: 1.9em;
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
     -o-transition: all 0.4s;
