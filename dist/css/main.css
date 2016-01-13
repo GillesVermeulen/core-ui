@@ -868,6 +868,12 @@ header .header {
             border-color: #fff; }
           .gallery-grid .gallery-item .gallery-thumb-wrapper .gallery-thumb-actions .mv-gallery-button:last-child {
             margin-right: 0; }
+          .gallery-grid .gallery-item .gallery-thumb-wrapper .gallery-thumb-actions .mv-gallery-button.disabled {
+            color: #999;
+            border-color: #999; }
+            .gallery-grid .gallery-item .gallery-thumb-wrapper .gallery-thumb-actions .mv-gallery-button.disabled:hover {
+              color: #999;
+              border-color: #999; }
     .gallery-grid .gallery-item.active {
       cursor: pointer; }
       .gallery-grid .gallery-item.active .gallery-thumb-title {
@@ -956,7 +962,21 @@ header .header {
       font-size: 1.2em;
       top: -4px; }
   .video-js.vjs-default-skin .vjs-control-bar {
-    background: #008fdf; }
+    background: #008fdf;
+    height: 3.5em; }
+    .video-js.vjs-default-skin .vjs-control-bar .vjs-control:before {
+      font-size: 2.5em;
+      line-height: 1.4em;
+      z-index: 100; }
+  .video-js.vjs-default-skin .vjs-volume-bar {
+    margin: 1.6em 2em; }
+  .video-js.vjs-default-skin .vjs-time-control {
+    line-height: 3.4em;
+    font-size: 1.1em;
+    overflow: hidden; }
+  .video-js.vjs-default-skin .vjs-fullscreen-control {
+    position: absolute;
+    right: 0; }
   .video-js.vjs-default-skin .vjs-remaining-time {
     display: none; }
   .video-js.vjs-default-skin .vjs-load-progress {
@@ -976,6 +996,11 @@ header .header {
     -o-transition: all 0.4s;
     transition: all 0.4s;
     transition-delay: 0s; }
+  .video-js.vjs-default-skin.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+    -webkit-transition: visibility .5s, opacity .5s;
+    -moz-transition: visibility .5s, opacity .5s;
+    -o-transition: visibility .5s, opacity .5s;
+    transition: visibility .5s, opacity .5s; }
 
 footer {
   background-color: #363f48;

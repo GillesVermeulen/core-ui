@@ -145,6 +145,16 @@
 					&:last-child {
 						margin-right: 0;
 					}
+
+					&.disabled {
+			    		color: #999;
+			    		border-color: #999;
+
+			    		&:hover {
+			    			color: #999;
+			    			border-color: #999;
+			    		}
+			    	}
 				}
 			}
 		}
