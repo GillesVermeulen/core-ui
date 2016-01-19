@@ -52,131 +52,54 @@
 			</div>
 		</header>		<div class="content-area">
 			<div class="content-container">
-				<h2>Educational Group Licenses</h2>
+				<h2>Education Pro license request</h2>
 				<br>
-				<p>Your domain has not yet been approved. We first need to verify the email address issued to you by your educational institution before you can complete your order. Once your domain has been approved, you’ll receive an email with further instructions.
+				<p>Moovly provides highly discounted or even free licenses to teachers, students, schools, professors and other professionals working in the non-commercial education sector. Educational licenses are only available for <strong>true educational accounts</strong>: please make sure you are registered on Moovly with an email address from a .edu or other educational domain.</p>
 		
-				If you have an email address linked to an educational institute, please link it to your account here.
-		
-				Please enter the following information:</p>
+				<p>
+					The <strong>educational Pro license</strong> (Edu Pro) has all features of the full Moovly <a href="#">Pro license</a> and is available at <strong>50% discount</strong> (yearly licenses only). To request your educational Pro license, please complete the form below:
+				</p>
 		
 				<br>
 				<div class="content-container group-licenses">
-					<h3 class="center">About your Educational Institution</h3>
-		
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="form-group">
-				                <label>Name of your institution</label>
-				                <input type="text" class="form-control" placeholder="Name">
+				                <label>First Name</label>
+				                <input type="text" class="form-control" placeholder="Name" data-attr="firstname">
 				            </div>
 						</div>
 						<div class="col-sm-6">
 							<div class="form-group">
-				                <label>Website</label>
-				                <input type="text" class="form-control" placeholder="https://">
+				                <label>Last Name</label>
+				                <input type="text" class="form-control" placeholder="Last name" data-attr="name">
 				            </div>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-6">
+						<div class="col-sm-7">
 							<div class="form-group">
-				                <label>Address</label>
-				                <input type="text" class="form-control" placeholder="Address">
+				                <label>Subject</label>
+				                <input type="text" class="form-control" placeholder="Subject" data-attr="subject">
 				            </div>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-sm-5">
 							<div class="form-group">
-				                <label>Zip Code</label>
-				                <input type="text" class="form-control" placeholder="">
-				            </div>
-						</div>
-					</div>
-					<div class="row">
-						
-						<div class="col-sm-6">
-							<div class="form-group">
-				                <label>City</label>
-				                <input type="text" class="form-control" placeholder="">
-				            </div>
-						</div>
-						<div class="col-sm-6">
-							<div class="form-group">
-				                <label>Country</label>
-				                <input type="text" class="form-control" placeholder="">
-				            </div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="form-group">
-				                <label>Education type</label>
-				                <select class="chosen-select">
-				                	<option></option>
-				                	<option value="primary">Primary school (6-12)</option>
-				                	<option value="secondary">Secondary school (12-18)</option>
-				                	<option value="higher">Higher education (18+)</option>
-				                	<option value="adult">Adult education</option>
-				                	<option value="other">Other:</option>
-				                </select>
-				                <input type="text" class="form-control chosen-other" placeholder="Other education type">
-				            </div>
-						</div>
-					</div>	
-					<br>
-					<div class="row">
-						<div class="col-sm-6">
-							<h3>Group manager</h3>
-							<div class="form-group">
-				                <label>First name</label>
-				                <input type="text" class="form-control" placeholder="">
-				            </div>
-				            <div class="form-group">
-				                <label>Last name</label>
-				                <input type="text" class="form-control" placeholder="">
-				            </div>
-				            <div class="form-group">
 				                <label>Email</label>
-				                <input type="text" class="form-control" placeholder="">
+				                <input type="email" class="form-control" placeholder="Email" data-attr="email">
 				            </div>
-						</div>
-						<div class="col-sm-6">
-							<h3>Administrative Contact</h3>
-							<div class="form-group">
-				                <label>First name</label>
-				                <input type="text" class="form-control" placeholder="">
-				            </div>
-				            <div class="form-group">
-				                <label>Last name</label>
-				                <input type="text" class="form-control" placeholder="">
-				            </div>
-				            <div class="form-group">
-				                <label>Email</label>
-				                <input type="text" class="form-control" placeholder="">
-				            </div>
-				            <div class="checkbox">
-								<input type="checkbox">
-						    	<label>Invoices should be sent to group manager</label>
-						  	</div>
 						</div>
 					</div>
-					<br>
-					<p class="small">
-						Since the domain "" is not yet known as an educational domain to us, we will need to review it. If you cannot provide us with a known educational domain, please provide us with a public link where we can verify your status within an educational instutute (e.g.: your public linkedin profile).
-						<div class="row">
-							<div class="col-sm-6">
-								 <input type="text" class="form-control" placeholder="Public link">
-							</div>
-						</div>
-						<br>
-						<span class="mv-button">
-							Submit
-						</span>
-					</p>
+					<div class="form-group">
+		                <label>Message</label>
+		                <div contenteditable="true" class="contenteditable" data-attr="message"></div>
+		            </div>
+		            <span class="mv-button" id="submit">
+						Send
+					</span>
 				</div>
 			</div>
-		</div>
-		<footer>
+		</div>		<footer>
 			<div class="content-container">
 				<div class="row">
 					<div class="col-xs-3">
@@ -233,6 +156,28 @@
 		<script type="text/javascript" src="vendor/jquery/dist/jquery.min.js"></script>
 		<script type="text/javascript" src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="vendor/chosen/chosen.jquery.min.js"></script>
-		<script src="js/built.js"></script> 
+		<script type="text/javascript">
+
+			var getFormData = function() { 
+		  		return {
+			  		firstname: $('[data-attr=firstname]').val(),
+			  		lasttname: $('[data-attr=name]').val(),
+			  		subject: $('[data-attr=subject]').val(),
+			  		email: $('[data-attr=email]').val(),
+			  		message: $('[data-attr=message]').html()
+			  	}
+		  	}
+
+		  	$('#submit').click(function(){
+		  		$.ajax({
+				  	method: "POST",
+				  	dataType: "json",
+				  	url: "http://jsonplaceholder.typicode.com",
+				  	data: JSON.stringify(getFormData()),
+			  		contentType: 'application/json'
+				});
+		  	});
+
+		</script> 
 	</body>
 </html>

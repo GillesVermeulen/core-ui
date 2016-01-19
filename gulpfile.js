@@ -69,15 +69,37 @@ gulp.task('handlebars:mail', function(){
         .pipe(rename('mail.html'))
         .pipe(gulp.dest(dirs.release+'/'));
 });
-gulp.task('handlebars:edu', function(){
+gulp.task('handlebars:edu_plus', function(){
     var templateData = {},
         options = {
             partialsDirectory : [dirs.source+'/partials']
         };
 
-    return gulp.src(dirs.source+'/edu.hbs')
+    return gulp.src(dirs.source+'/edu_plus_license.hbs')
         .pipe(gulpHandlebars(templateData, options))
-        .pipe(rename('edu.html'))
+        .pipe(rename('edu_plus_license.html'))
+        .pipe(gulp.dest(dirs.release+'/'));
+});
+gulp.task('handlebars:edu_pro', function(){
+    var templateData = {},
+        options = {
+            partialsDirectory : [dirs.source+'/partials']
+        };
+
+    return gulp.src(dirs.source+'/edu_pro_license.hbs')
+        .pipe(gulpHandlebars(templateData, options))
+        .pipe(rename('edu_pro_license.html'))
+        .pipe(gulp.dest(dirs.release+'/'));
+});
+gulp.task('handlebars:edu_group', function(){
+    var templateData = {},
+        options = {
+            partialsDirectory : [dirs.source+'/partials']
+        };
+
+    return gulp.src(dirs.source+'/edu_group_licenses.hbs')
+        .pipe(gulpHandlebars(templateData, options))
+        .pipe(rename('edu_group_licenses.html'))
         .pipe(gulp.dest(dirs.release+'/'));
 });
 
@@ -122,7 +144,7 @@ gulp.task('sass', function() {
 // Watch
 gulp.task('watch', function() {
     gulp.watch(dirs.source+'/index.hbs', ['handlebars']);
-    gulp.watch(dirs.source+'/partials/**', ['handlebars', 'handlebars:mail', 'handlebars:edu']);
+    gulp.watch(dirs.source+'/partials/**', ['handlebars', 'handlebars:mail', 'edu']);
     gulp.watch(dirs.source+'/js/*.js', ['lint:before', 'concat']);
     gulp.watch(dirs.source+'/scss/*.scss', ['sass']);
 });
@@ -131,7 +153,8 @@ gulp.task('watch', function() {
 gulp.task('release', function(callback){
     runSequence('build', ['minify', 'lint:after'], callback);
 }); 
+gulp.task('edu', ['handlebars:edu_group', 'handlebars:edu_plus', 'handlebars:edu_pro']); 
 gulp.task('build', function(callback){
-    runSequence('clean', ['copy:images', 'handlebars', 'handlebars:mail', 'handlebars:edu', 'copy:scripts', 'sass', 'lint:before', 'concat'], callback);
+    runSequence('clean', ['copy:images', 'handlebars', 'handlebars:mail', 'edu', 'copy:scripts', 'sass', 'lint:before', 'concat'], callback);
 }); 
 gulp.task('default', ['build', 'watch']);

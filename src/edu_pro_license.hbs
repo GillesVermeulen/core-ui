@@ -17,13 +17,34 @@
 	</head>
 	<body id="edu">
 		{{>header}}
-		{{>edu/group_licenses}}
-
+		{{>edu/pro_license}}
 		{{>footer}}
 
 		<script type="text/javascript" src="vendor/jquery/dist/jquery.min.js"></script>
 		<script type="text/javascript" src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="vendor/chosen/chosen.jquery.min.js"></script>
-		<script src="js/built.js"></script> 
+		<script type="text/javascript">
+
+			var getFormData = function() { 
+		  		return {
+			  		firstname: $('[data-attr=firstname]').val(),
+			  		lasttname: $('[data-attr=name]').val(),
+			  		subject: $('[data-attr=subject]').val(),
+			  		email: $('[data-attr=email]').val(),
+			  		message: $('[data-attr=message]').html()
+			  	}
+		  	}
+
+		  	$('#submit').click(function(){
+		  		$.ajax({
+				  	method: "POST",
+				  	dataType: "json",
+				  	url: "http://jsonplaceholder.typicode.com",
+				  	data: JSON.stringify(getFormData()),
+			  		contentType: 'application/json'
+				});
+		  	});
+
+		</script> 
 	</body>
 </html>
