@@ -40,7 +40,11 @@ gulp.task('copy:scripts', function() {
             dirs.source+'/vendor/bootstrap/dist/css/bootstrap.min.css',
             dirs.source+'/vendor/bootstrap/dist/js/bootstrap.min.js',
             dirs.source+'/vendor/font-awesome/css/font-awesome.min.css',
-            dirs.source+'/vendor/font-awesome/fonts/*'
+            dirs.source+'/vendor/font-awesome/fonts/*',
+            dirs.source+'/vendor/chosen/chosen.jquery.min.js',
+            dirs.source+'/vendor/chosen/chosen-sprite.png',
+            dirs.source+'/vendor/chosen/chosen-sprite@2x.png',
+            dirs.source+'/vendor/chosen/chosen.min.css',
         ]).pipe(copy(dirs.release, {prefix: 1}));
 });
 
@@ -56,7 +60,26 @@ gulp.task('handlebars', function(){
         .pipe(rename('index.html'))
         .pipe(gulp.dest(dirs.release+'/'));
 });
+gulp.task('handlebars:mail', function(){
+    var templateData = {},
+        options = {};
 
+    return gulp.src(dirs.source+'/mail.hbs')
+        .pipe(gulpHandlebars(templateData, options))
+        .pipe(rename('mail.html'))
+        .pipe(gulp.dest(dirs.release+'/'));
+});
+gulp.task('handlebars:edu', function(){
+    var templateData = {},
+        options = {
+            partialsDirectory : [dirs.source+'/partials']
+        };
+
+    return gulp.src(dirs.source+'/edu.hbs')
+        .pipe(gulpHandlebars(templateData, options))
+        .pipe(rename('edu.html'))
+        .pipe(gulp.dest(dirs.release+'/'));
+});
 
 
 // Lint Tasks
@@ -99,7 +122,7 @@ gulp.task('sass', function() {
 // Watch
 gulp.task('watch', function() {
     gulp.watch(dirs.source+'/index.hbs', ['handlebars']);
-    gulp.watch(dirs.source+'/partials/*', ['handlebars']);
+    gulp.watch(dirs.source+'/partials/**', ['handlebars', 'handlebars:mail', 'handlebars:edu']);
     gulp.watch(dirs.source+'/js/*.js', ['lint:before', 'concat']);
     gulp.watch(dirs.source+'/scss/*.scss', ['sass']);
 });
@@ -109,6 +132,6 @@ gulp.task('release', function(callback){
     runSequence('build', ['minify', 'lint:after'], callback);
 }); 
 gulp.task('build', function(callback){
-    runSequence('clean', ['copy:images', 'handlebars', 'copy:scripts', 'sass', 'lint:before', 'concat'], callback);
+    runSequence('clean', ['copy:images', 'handlebars', 'handlebars:mail', 'handlebars:edu', 'copy:scripts', 'sass', 'lint:before', 'concat'], callback);
 }); 
 gulp.task('default', ['build', 'watch']);

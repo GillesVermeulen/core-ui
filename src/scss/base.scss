@@ -99,6 +99,10 @@ p {
 	@media (max-width: 1000px) {
 		padding: 0 15px;
 	}
+
+	&.slim {
+		max-width: 600px;
+	}
 }
 
 .center {

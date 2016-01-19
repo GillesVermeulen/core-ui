@@ -71,6 +71,8 @@ p {
   @media (max-width: 1000px) {
     .content-container {
       padding: 0 15px; } }
+  .content-container.slim {
+    max-width: 600px; }
 
 .center {
   text-align: center; }
@@ -1096,5 +1098,23 @@ footer {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
+
+.group-licenses {
+  max-width: 600px; }
+  .group-licenses h3 {
+    margin-bottom: 30px; }
+  .group-licenses .checkbox {
+    position: relative;
+    margin: 20px 0; }
+    .group-licenses .checkbox > input {
+      position: absolute;
+      left: 20px; }
+    .group-licenses .checkbox > label {
+      padding-left: 30px;
+      font-weight: 300;
+      font-size: .8em;
+      line-height: 1.2em; }
+  .group-licenses .chosen-other {
+    display: none; }
 
 /*# sourceMappingURL=main.css.map */
