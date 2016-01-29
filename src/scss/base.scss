@@ -73,6 +73,10 @@ p {
 			border-bottom: 1px solid $dark-blue;			
 		}
 	}
+
+	&.small {
+		line-height: 1.6em;
+	}
 }
 
 .alert-dismissable .close, .alert-dismissible .close {
