@@ -90,15 +90,18 @@ if ($('.grid').length) {
 }
 
 // Player
-videojs("myMoov", {
-  inactivityTimeout: 700
-});
-videojs('myMoov').ready(function() {
-  this.hotkeys({
-    volumeStep: 0.1,
-    seekStep: 5
-  });  
-  this.play();
-});
+if ($('#video-examples')) {console.log("rr")
+
+  videojs("myMoov", {
+    inactivityTimeout: 700
+  });
+  videojs('myMoov').ready(function() {
+    this.hotkeys({
+      volumeStep: 0.1,
+      seekStep: 5
+    });  
+    this.play();
+  });
+}
 
 
