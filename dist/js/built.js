@@ -90,7 +90,7 @@ if ($('.grid').length) {
 }
 
 // Player
-if ($('#video-examples')) {console.log("rr")
+if ($('#video-example').length) {
 
   videojs("myMoov", {
     inactivityTimeout: 700
