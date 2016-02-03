@@ -51,7 +51,7 @@
 				</div>
 			</div>
 		</header>		<div class="content-area">
-			<div class="content-container">
+			<div class="content-container main-content">
 				<h2>Education Pro license request</h2>
 				<br>
 				<p>Moovly provides highly discounted or even free licenses to teachers, students, schools, professors and other professionals working in the non-commercial education sector. Educational licenses are only available for <strong>true educational accounts</strong>: please make sure you are registered on Moovly with an email address from a .edu or other educational domain.</p>
@@ -98,6 +98,9 @@
 						Send
 					</span>
 				</div>
+			</div>
+			<div class="content-container edu-alerts">
+				<div class="alerts alert alert-warning"></div>
 			</div>
 		</div>		<footer>
 			<div class="content-container">
@@ -169,14 +172,43 @@
 			  	}
 		  	}
 
+		  	$// Get auth token
+		  	var token = localStorage.getItem('token');
+
+		  	// Submit form
 		  	$('#submit').click(function(){
-		  		$.ajax({
-				  	method: "POST",
-				  	dataType: "json",
-				  	url: "http://jsonplaceholder.typicode.com",
-				  	data: JSON.stringify(getFormData()),
-			  		contentType: 'application/json'
-				});
+
+		  		// If is authenticated
+		  		if (token && token.length > 9) {
+		  			$.ajax({
+					  	method: "POST",
+					  	dataType: "json",
+					  	url: "https://api.moovly.com/license/edu/pro",
+					  	data: JSON.stringify(getFormData()),
+				  		contentType: 'application/json',
+				  		beforeSend: function(xhr) {
+						    xhr.setRequestHeader("Authorization", token);
+						},
+						success: function(response) {
+
+							$('.alerts').html(response.message).show();
+							$('.main-content').hide();
+							
+							if (response.status == 'approved')
+								$('.alerts').removeClass('alert-warning').addClass('alert-success');
+						},
+						error: function(response) {
+							$('.alerts').html(response.error || "There was an error with the request.").show();
+						}
+					});
+
+					$('.alerts').hide();
+		  		}
+
+		  		// If not authenticated
+		  		else {
+		  			$('.alerts').html('To request an educational license, please first login.').show();
+		  		}
 		  	});
 
 		</script> 
