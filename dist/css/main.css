@@ -900,7 +900,12 @@ header .header {
   margin: 0 auto;
   padding-top: 50px; }
   .project-view h3 {
-    font-weight: bold; }
+    font-weight: bold;
+    margin-bottom: 0px; }
+  .project-view .project-owner {
+    margin-bottom: 15px;
+    font-size: .8em;
+    display: block; }
   .project-view .project-actions {
     margin: 20px 0;
     overflow: hidden; }

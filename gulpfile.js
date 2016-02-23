@@ -102,7 +102,17 @@ gulp.task('handlebars:edu_group', function(){
         .pipe(rename('edu_group_licenses.html'))
         .pipe(gulp.dest(dirs.release+'/'));
 });
+gulp.task('handlebars:smartschool', function(){
+    var templateData = {},
+        options = {
+            partialsDirectory : [dirs.source+'/partials']
+        };
 
+    return gulp.src(dirs.source+'/smartschool.hbs')
+        .pipe(gulpHandlebars(templateData, options))
+        .pipe(rename('smartschool.html'))
+        .pipe(gulp.dest(dirs.release+'/'));
+});
 
 // Lint Tasks
 gulp.task('lint:before', function() {
@@ -153,7 +163,7 @@ gulp.task('watch', function() {
 gulp.task('release', function(callback){
     runSequence('build', ['minify', 'lint:after'], callback);
 }); 
-gulp.task('edu', ['handlebars:edu_group', 'handlebars:edu_plus', 'handlebars:edu_pro']); 
+gulp.task('edu', ['handlebars:edu_group', 'handlebars:edu_plus', 'handlebars:edu_pro', 'handlebars:smartschool']); 
 gulp.task('build', function(callback){
     runSequence('clean', ['copy:images', 'handlebars', 'handlebars:mail', 'edu', 'copy:scripts', 'sass', 'lint:before', 'concat'], callback);
 }); 
