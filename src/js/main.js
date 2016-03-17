@@ -6,11 +6,11 @@ $('.feature-reel-item').hover(function(){
 
 // Inputs
 $('.big-input input').focus(function(){
-	$(this).parent().addClass('focuson');
+	$(this).closest('.big-input').addClass('focuson');
 });
 
 $('.big-input input').focusout(function(){
-	$(this).parent().removeClass('focuson');
+	$(this).closest('.big-input').removeClass('focuson');
 });
 
 // Gallery thumbnails
